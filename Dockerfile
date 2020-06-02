@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ARG OCAML_VERSION=4.08.1
+ARG OCAML_VERSION=4.06.1
 
 RUN apk update \
     && apk add --no-cache --virtual .build-deps build-base coreutils \
