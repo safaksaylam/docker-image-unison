@@ -4,7 +4,7 @@ ARG OCAML_VERSION=4.06.1
 
 RUN apk update \
     && apk add --no-cache --virtual .build-deps build-base coreutils \
-    	&& wget https://github.com/ocaml/ocaml/archive/${OCAML_VERSION}.tar.gz \
+	&& wget http://caml.inria.fr/pub/distrib/ocaml-${OCAML_VERSION:0:4}/ocaml-${OCAML_VERSION}.tar.gz \
 	&& tar xvf ocaml-${OCAML_VERSION}.tar.gz -C /tmp \
 	&& cd /tmp/ocaml-${OCAML_VERSION} \
     && ./configure \
